@@ -4,8 +4,8 @@
 
 ## 数据概览
 
-- **总条目数**: 41 条
-- **最后更新**: 2026-10-07
+- **总条目数**: 42 条
+- **最后更新**: 2026-10-08
 - **数据来源**: 知乎、CSDN、少数派、腾讯云、36氪 等
 
 ## 来源分布
@@ -17,7 +17,7 @@
 | 少数派 | 5 |
 | YouTube | 2 |
 | u-chuhai.com | 2 |
-| 其他 | 19 |
+| 其他 | 20 |
 
 ## 搜索关键词覆盖
 
@@ -44,10 +44,10 @@
 cat secrets.json | jq '.'
 
 # 按来源筛选
-cat secrets.json | jq '.[] | select(.source=="zhihu.com")'
+cat secrets.json | jq '.[] | select(.source=="知乎")'
 
 # 查看最近数据
-cat secrets.json | jq '.[] | select(.collected_at=="2026-10-04")'
+cat secrets.json | jq '.[] | select(.collected_at>"2026-10-01")'
 ```
 
 ## 贡献
